@@ -20,6 +20,14 @@ app.get("/login", (req,res)=>{
     res.render("login")
 })
 
+app.get("/about", (req,res)=>{
+    res.render("aboutus")
+})
+
+app.get("/register", (req,res)=>{
+    res.render("register")
+})
+
 
 
 
