@@ -28,9 +28,9 @@ app.get("/register", (req,res)=>{
     res.render("register")
 })
 
-
-
-
+app.get("/features", (req,res)=>{
+    res.render("features")
+})
 
 
 
