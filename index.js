@@ -1,39 +1,35 @@
-const express= require("express");
-const bodyparser=require("body-parser");
-let ejs = require('ejs');
-const app= express();
-app.use(bodyparser.urlencoded({extended:true}));
-app.set('view engine', 'ejs');
+const express = require("express");
+const bodyparser = require("body-parser");
+let ejs = require("ejs");
+const app = express();
+app.use(bodyparser.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
 app.use(express.static("static"));
 
+app.get("/", (req, res) => {
+  res.render("homepage");
+});
 
-app.get("/", (req,res)=>{
-    res.render("homepage")
-})
+app.get("/contact", (req, res) => {
+  res.render("contact card");
+});
 
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 
-app.get("/contact", (req,res)=>{
-    res.render("contact card")
-})
+app.get("/about", (req, res) => {
+  res.render("aboutus");
+});
 
-app.get("/login", (req,res)=>{
-    res.render("login")
-})
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 
-app.get("/about", (req,res)=>{
-    res.render("aboutus")
-})
+app.get("/features", (req, res) => {
+  res.render("dashboard");
+});
 
-app.get("/register", (req,res)=>{
-    res.render("register")
-})
-
-app.get("/features", (req,res)=>{
-    res.render("features")
-})
-
-
-
-app.listen(3000,()=>{
-    console.log("Server started");
-})
+app.listen(3000, () => {
+  console.log("Server started");
+});
