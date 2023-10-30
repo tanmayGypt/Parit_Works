@@ -38,8 +38,12 @@ app.get("/features/CheckPassword", (req, res) => {
   res.render("check_Password");
 });
 
-app.get("/features/credentials", (req, res) => {
-  res.render("credentials");
+app.get("/features/Breach_Checker", (req, res) => {
+  res.render("breach_checker");
+});
+
+app.get("/features/password_generator", (req, res) => {
+  res.render("password_generator");
 });
 app.get("/features/profiles", (req, res) => {
   res.render("userprofiles");

@@ -1,4 +1,6 @@
-<%- include('navbar'); -%>
+<%- include('navbar'); -%> <%- include ("sidebar"); -%>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +18,7 @@
         margin: 30px auto;
         text-align: center;
         padding: 20px 0 0 0;
-        border-radius: 4px;
+        border-radius: 17px;
         box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
         margin-top: 30px;
       }
@@ -24,29 +26,62 @@
       .login_block {
         margin-top: 10%;
       }
+      .button-22 {
+        align-items: center;
+        appearance: button;
+        background-color: #0276FF;
+        border-radius: 8px;
+        border-style: none;
+        box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        font-family: "RM Neue",sans-serif;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+        padding: 10px 21px;
+        text-align: center;
+        text-transform: none;
+        transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin: auto;
+      }
+      
+      .button-22:active {
+        background-color: #006AE8;
+      }
+      
+      .button-22:hover {
+        background-color: #1C84FF;
+      }
     </style>
   </head>
   <body>
     <div class="login_block">
-      <!-- partial:index.partial.html -->
       <div id="login-form-wrap">
-        <h2>Register</h2>
+        <h2>Breach Checker</h2>
         <form id="login-form">
           <p>
             <input
               type="text"
               id="username"
               name="username"
-              placeholder="Name"
+              placeholder="id"
               required
             /><i class="validation"><span></span><span></span></i>
           </p>
           <p>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
-              placeholder="Email Address"
+              placeholder="Title"
               required
             /><i class="validation"><span></span><span></span></i>
           </p>
@@ -55,43 +90,44 @@
               type="text"
               id="username"
               name="username"
-              placeholder="Username"
+              placeholder="Website"
               required
             /><i class="validation"><span></span><span></span></i>
           </p>
           <p>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
-              placeholder="Create Password"
+              placeholder="Website Username"
               required
             /><i class="validation"><span></span><span></span></i>
           </p>
           <p>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
-              placeholder="Repeat Password"
+              placeholder="Password"
               required
             /><i class="validation"><span></span><span></span></i>
           </p>
+
           <p>
-            <input type="submit" id="login" value="Register" />
+            <h5 id="result">Result Here</h5>
+          </p>
+          <p>
+<button class="button-22" role="button">Show Result</button>
           </p>
         </form>
         <div id="create-account-wrap">
-          <p>Already have an account? <a href="/login">Login</a></p>
+          <p>Insert the Info to add the user</p>
           <p></p>
         </div>
 
-        <!--create-account-wrap-->
+        
       </div>
-      <!--login-form-wrap-->
-      <!-- partial -->
+      
     </div>
   </body>
 </html>
-
-<%- include('footer'); -%>
