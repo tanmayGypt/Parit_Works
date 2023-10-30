@@ -30,6 +30,21 @@ app.get("/features", (req, res) => {
   res.render("features");
 });
 
+app.get("/features/userdetails", (req, res) => {
+  res.render("userdetails");
+});
+
+app.get("/features/CheckPassword", (req, res) => {
+  res.render("check_Password");
+});
+
+app.get("/features/credentials", (req, res) => {
+  res.render("credentials");
+});
+app.get("/features/profiles", (req, res) => {
+  res.render("userprofiles");
+});
+
 app.listen(3000, () => {
   console.log("Server started");
 });
