@@ -27,7 +27,7 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/features", (req, res) => {
-  res.render("dashboard");
+  res.render("features");
 });
 
 app.listen(3000, () => {
